@@ -15,51 +15,7 @@
     <link href="{{ asset('css/toni.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-default">
-                    <div class="panel-body text-center">
-                        <div class="col-xs-12 col-sm-12 col-md-6">
-                            <div class="col-xs-12 col-sm-12 col-md-6">
-                                <ul class="nav nav-pills nav-stacked">
-                                    <li class="active"><a href="#">Home</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-6">
-                                <ul class="nav nav-pills nav-stacked">
-                                    <li class="active"><a href="#">Data Makanan</a></li>
-                                    <li class="active"><a href="#">Data Kriteria</a></li>
-                                    <li class="active"><a href="#">Data Subkriteria</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-3">
-                            <ul class="nav nav-pills nav-stacked">
-                                <li class="active"><a href="#">Nilai Kriteria</a></li>
-                                <li class="active"><a href="#">Nilai Subkriteria</a></li>
-                                <li class="active"><a href="#">Nilai Makanan</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-3">
-                            <ul class="nav nav-pills nav-stacked">
-                                <li class="active"><a href="#">Hasil AKhir</a></li>
-                                <li class="active">
-                                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                        Logout
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                                    </form>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {{--  <div id="app">
+    <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -100,7 +56,7 @@
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                                        document.getElementById('logout-form').submit();">
                                             Logout
                                         </a>
 
@@ -114,12 +70,9 @@
                     </ul>
                 </div>
             </div>
-        </nav>  --}}
-
+        </nav>
         @yield('content')
-    {{--  </div>  --}}
-
-    <!-- Scripts -->
+    </div>
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
