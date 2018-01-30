@@ -3,10 +3,10 @@
 @section('content')
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-12 col-md-12">
-            <div class="col-sm-12 col-md-6">
-                <h3>Tabel Skala Penilaian Perbandingan Berpasangan</h3>
-                <span class="hrdivider"></span>
+        <div class="col-sm-12 col-md-5">
+            <h3>Tabel Skala Penilaian Perbandingan Berpasangan</h3>
+            <span class="hrdivider"></span>
+            <div style="overflow-y:auto">
                 <table class="table table-hover table-bordered table-responsive table-striped table-information">
                     <thead>
                         <tr>
@@ -42,9 +42,11 @@
                     </tbody>
                 </table>            
             </div>
-            <div class="col-sm-12 col-md-6">
-                <h3>Tabel Skala Penilaian Perbandingan Berpasangan</h3>
-                <span class="hrdivider"></span>
+        </div>
+        <div class="col-sm-12 col-md-7">
+            <h3>Tabel Skala Penilaian Perbandingan Berpasangan</h3>
+            <span class="hrdivider"></span>
+            <div style="overflow-y: auto">
                 <table class="table table-hover table-bordered table-responsive table-striped table-information">
                     <thead>
                         <tr>
@@ -68,7 +70,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Nilai RI</td>
+                            <td style="font-weight: bold">Nilai RI</td>
                             <td>0.00</td>
                             <td>0.00</td>
                             <td>0.58</td>
@@ -89,15 +91,15 @@
                 </table>
             </div>
         </div>
+    </div>
+    <div class="row">
         <div class="col-md-12">
-            <div class="col-md-12">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </div>
             </div>
         </div>
