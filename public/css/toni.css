@@ -1,9 +1,18 @@
-/* .menuutama li{
-    text-align: center;
-    margin: 0.1em;
-    border: 1px solid black;
-    border-radius: 5px;
+.table-information {
+    margin-top: 2em;
 }
-.menuutama li a{
 
-} */
+.table-information thead tr th {
+    text-align: center !important;
+    vertical-align: middle;
+}
+
+.hrdivider {
+    height: 1px;
+    width: 100%;
+    display: block;
+    /* for use on default inline elements like span */
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #e5e5e5;
+}

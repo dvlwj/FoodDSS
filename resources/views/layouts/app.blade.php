@@ -13,112 +13,112 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/toni.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-default">
-                    <div class="panel-body text-center">
-                        <div class="col-xs-12 col-sm-12 col-md-6">
-                            <div class="col-xs-12 col-sm-12 col-md-6">
-                                <ul class="nav nav-pills nav-stacked">
-                                    <li class="active"><a href="#">Home</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-6">
-                                <ul class="nav nav-pills nav-stacked">
-                                    <li class="active"><a href="#">Data Makanan</a></li>
-                                    <li class="active"><a href="#">Data Kriteria</a></li>
-                                    <li class="active"><a href="#">Data Subkriteria</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-3">
-                            <ul class="nav nav-pills nav-stacked">
-                                <li class="active"><a href="#">Nilai Kriteria</a></li>
-                                <li class="active"><a href="#">Nilai Subkriteria</a></li>
-                                <li class="active"><a href="#">Nilai Makanan</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-3">
-                            <ul class="nav nav-pills nav-stacked">
-                                <li class="active"><a href="#">Hasil AKhir</a></li>
-                                <li class="active">
-                                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                        Logout
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                                    </form>
-                                </li>
-                            </ul>
-                        </div>
+            <nav class="navbar navbar-default navbar-static-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <!-- Collapsed Hamburger -->
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
+                            <span class="sr-only">Toggle Navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- Branding Image -->
+                        <a class="navbar-brand" href="{{ url('/') }}">
+                            {{ config('app.name', 'Laravel') }}
+                        </a>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {{--  <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
+                    <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="nav navbar-nav navbar-right nav-tabs-justified">
+                            @auth
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                                    {{ Auth::user()->username }} <span class="caret"></span>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Data
+                                    <span class="caret"></span>
                                 </a>
-
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                        <a href="{{route('makanan.index')}}">Data Makanan</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('kriteria.index')}}">Data Kriteria</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('subkriteria.index')}}">Data Subkriteria</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Nilai
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">Nilai Kriteria</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Nilai Subkriteria</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Nilai Makanan</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Hasil Akhir</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
+                            @endauth
+                        </ul>
+                        <!-- Right Side Of Navbar -->
+                        <!-- <ul class="nav navbar-nav navbar-right">
+                            @guest
+                            <li>
+                                <a href="{{ route('login') }}">Login</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('register') }}">Register</a>
+                            </li>
+                            @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                    {{ Auth::user()->username }}
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                             Logout
                                         </a>
-
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
                                 </ul>
                             </li>
-                        @endguest
-                    </ul>
+                            @endguest
+                        </ul> -->
+                    </div>
                 </div>
-            </div>
-        </nav>  --}}
-
+            </nav>
+        </div>
+    </div>
         @yield('content')
-    {{--  </div>  --}}
-
     <!-- Scripts -->
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>

@@ -18,3 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function() {
+
+	Route::resource('makanan', 'data_makanan_controller');
+	Route::resource('kriteria', 'data_kriteria_controller');
+	Route::resource('subkriteria', 'data_subkriteria_controller');
+
+});
