@@ -39,5 +39,9 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function() {
 	Route::resource('makanan', 'data_makanan_controller');
 	Route::resource('kriteria', 'data_kriteria_controller');
 	Route::resource('subkriteria', 'data_subkriteria_controller');
+	Route::resource('nilai_kriteria', 'nilai_kriteria_controller');
+	Route::resource('nilai_subkriteria', 'nilai_subkriteria_controller');
+	Route::resource('nilai_makanan', 'nilai_makanan_controller');
+	Route::resource('hasil_akhir', 'hasil_akhir_controller');
 
 });

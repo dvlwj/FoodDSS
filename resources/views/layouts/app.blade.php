@@ -38,7 +38,7 @@
                         <ul class="nav navbar-nav navbar-right nav-tabs-justified">
                             @auth
                             <li>
-                                <a href="#">Home</a>
+                                <a href="{{route('home')}}">Home</a>
                             </li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Data
@@ -62,18 +62,18 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="#">Nilai Kriteria</a>
+                                        <a href="{{route('nilai_kriteria.index')}}">Nilai Kriteria</a>
                                     </li>
                                     <li>
-                                        <a href="#">Nilai Subkriteria</a>
+                                        <a href="{{route('nilai_subkriteria.index')}}">Nilai Subkriteria</a>
                                     </li>
                                     <li>
-                                        <a href="#">Nilai Makanan</a>
+                                        <a href="{{route('nilai_makanan.index')}}">Nilai Makanan</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">Hasil Akhir</a>
+                                <a href="{{route('hasil_akhir.index')}}">Hasil Akhir</a>
                             </li>
                             <li>
                                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

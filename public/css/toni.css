@@ -1,10 +1,23 @@
-.table-information {
+.bold {
+    font-weight: bold;
+}
+
+.table-information, .table-nilai {
     margin-top: 2em;
 }
 
 .table-information thead tr th {
     text-align: center !important;
     vertical-align: middle;
+}
+
+.table-nilai thead tr th, .table-nilai tbody tr td {
+    text-align: center !important;
+    vertical-align: middle;
+}
+
+table td:hover {
+    background-color: bisque;
 }
 
 .hrdivider {
