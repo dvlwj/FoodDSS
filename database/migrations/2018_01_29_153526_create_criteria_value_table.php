@@ -13,15 +13,15 @@ class CreateCriteriaValueTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_nilaikrit', function (Blueprint $table) {
+        Schema::create('nilaikrit', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('lem_pro');
-            $table->integer('ome_pro');
-            $table->integer('ome_lem');
+            $table->integer('kar_pro');
+            $table->integer('kar_lem');
             $table->integer('ser_pro');
             $table->integer('ser_lem');
-            $table->integer('ser_ome');
-            $table->timestamps();
+            $table->integer('ser_kar');
+            // $table->timestamps();
         });
     }
 

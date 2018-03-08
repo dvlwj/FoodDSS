@@ -13,9 +13,10 @@ class CreateCriteriaTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_kriteria', function (Blueprint $table) {
+        Schema::create('kriteria', function (Blueprint $table) {
             $table->increments('id');
-            $table->char('nm_kriteria')->unique();
+            $table->char('kd_kriteria')->unique();
+            $table->char('nama')->unique();
             $table->timestamps();
         });
     }

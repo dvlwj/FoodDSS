@@ -13,10 +13,11 @@ class CreateSubCriteriaTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_subkriteria', function (Blueprint $table) {
+        Schema::create('subkriteria', function (Blueprint $table) {
             $table->increments('id');
-            $table->char('nm_subkrit');
-            $table->timestamps();
+            $table->char('kd_subkriteria');
+            $table->char('nama');
+            // $table->timestamps();
         });
     }
 

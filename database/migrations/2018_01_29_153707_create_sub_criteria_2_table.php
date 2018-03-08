@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSubCriteria1Table extends Migration
+class CreateSubCriteria2Table extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreateSubCriteria1Table extends Migration
      */
     public function up()
     {
-        Schema::create('nilaisub1', function (Blueprint $table) {
+        Schema::create('nilaisub2', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('ba1');
-            $table->integer('ca1');
-            $table->integer('cb1');
-            // $table->integer('ba2');
-            // $table->integer('ca2');
-            // $table->integer('cb2');
+            // $table->integer('ba1');
+            // $table->integer('ca1');
+            // $table->integer('cb1');
+            $table->integer('ba2');
+            $table->integer('ca2');
+            $table->integer('cb2');
             // $table->integer('ba3');
             // $table->integer('ca3');
             // $table->integer('cb3');

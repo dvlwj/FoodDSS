@@ -13,10 +13,11 @@ class CreateFoodTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_makanan', function (Blueprint $table) {
+        Schema::create('makanan', function (Blueprint $table) {
             $table->increments('id');
-            $table->char('nm_makanan')->unique();
-            $table->timestamps();
+            $table->char('kd_makanan')->unique(6);
+            $table->char('nama')->unique();
+            // $table->timestamps();
         });
     }
 

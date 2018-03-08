@@ -13,7 +13,7 @@ class CreateFoodValueTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_nilaiMakanan', function (Blueprint $table) {
+        Schema::create('nilaimakanan', function (Blueprint $table) {
             $table->increments('id');
             $table->float('nilai_makanan1');
             $table->float('nilai_makanan2');
