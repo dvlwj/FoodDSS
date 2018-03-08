@@ -7,9 +7,9 @@
             <span class="hrdivider"></span>
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <button type="button" class="btn btn-primary">
+                    <a href="{{route('kriteria.create')}}" class="btn btn-primary">
                         Tambah Data
-                    </button>
+                    </a>
                     <table class="table table-hover table-bordered table-responsive table-striped table-information">
                        <thead>
                            <tr>
@@ -20,21 +20,27 @@
                            </tr>
                        </thead>
                        <tbody>
-                           <tr>
-                               <td class="text-center" style="width:10%">1</td>
-                               <td class="text-center" style="width:20%">C01</td>
-                               <td style="width:55%">Protein</td>
-                               <td class="text-center" style="width:15%">
-                                   <button type="button" class="btn btn-sm btn-warning">
-                                       <i class="fa fa-fw fa-pencil"></i>
-                                   </button>                                   
-                                   <button type="button" class="btn btn-sm btn-danger">
-                                       <i class="fa fa-fw fa-trash"></i>
-                                   </button>                                   
-                               </td>
-                           </tr>
+                            @php
+                            $nomor = 1;
+                            @endphp
+                            @foreach ($datakriteria as $kriteria)
+                                <tr>
+                                    <td class="text-center">{{$nomor++}}</td>
+                                    <td class="text-center">{{$kriteria->kd_kriteria}}</td>
+                                    <td class="text-center">{{$kriteria->nama}}</td>
+                                    <td class="text-center">
+                                        <form action="{{ route('kriteria.destroy', $kriteria->id) }}" method="post">
+                                            {{csrf_field()}}
+                                            {{ method_field('DELETE') }}
+                                            <a href="{{ route('kriteria.edit', $kriteria->id) }}" class="btn btn-warning btn-sm"><i class="fa fa-fw fa-pencil"></i></a>
+                                            <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i></button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            @endforeach
                        </tbody>
-                   </table>
+                    </table>
+                    {{ $datakriteria->links() }}
                 </div>
             </div>
             

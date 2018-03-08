@@ -17,7 +17,7 @@ class CreateCriteriaTable extends Migration
             $table->increments('id');
             $table->char('kd_kriteria')->unique();
             $table->char('nama')->unique();
-            $table->timestamps();
+            // $table->timestamps();
         });
     }
 
