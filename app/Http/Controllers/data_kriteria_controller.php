@@ -15,7 +15,7 @@ class data_kriteria_controller extends Controller
      */
     public function index()
     {
-        $datakriteria = Kriteria::orderBy('id', 'asc')->paginate(5);
+        $datakriteria = Kriteria::orderBy('id')->paginate(5);
         return view('datakriteria.index',compact('datakriteria'));
     }
 

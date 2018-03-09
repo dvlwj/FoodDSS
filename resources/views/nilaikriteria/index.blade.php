@@ -10,10 +10,10 @@
                     <form class="form-inline" action="/action_page.php">
                         
                         <select name="" id="variabel" class="form-control">
-                            <option value="1">c01 - protein</option>
-                            <option value="1">c01 - protein</option>
-                            <option value="1">c01 - protein</option>
-                            <option value="1">c01 - protein</option>
+                            {{$nilaikriteria}}
+                            @foreach ($nilaikriteria as $kriteria)
+                            <option value="{{$kriteria->kd_kriteria}}">{{$kriteria->nama}}</option>
+                            @endforeach
                         </select>                        
                         <select name="" id="skala" class="form-control">
                             <option value="1">1 - Kedua elemen sama pentingnya</option>
@@ -27,10 +27,9 @@
                             <option value="9">9 - Satu elemen mutlak penting daripada elemen lainnya</option>
                         </select>                        
                         <select name="" id="variabel2" class="form-control">
-                            <option value="1">c01 - protein</option>
-                            <option value="1">c01 - protein</option>
-                            <option value="1">c01 - protein</option>
-                            <option value="1">c01 - protein</option>
+                            @foreach ($nilaikriteria as $kriteria)
+                            <option value="{{$kriteria->kd_kriteria}}">{{$kriteria->nama}}</option>
+                            @endforeach
                         </select>                        
                         <button type="submit" class="btn btn-default">Submit</button>
                     </form>
